@@ -1,0 +1,26 @@
+// CREATE EVENT
+
+image_speed = 0;
+
+#region This is an example region
+
+var gotoRoom, targetX, targetY;
+
+#endregion Further comment here if required
+//
+
+
+// COLLISION WITH PLAYER EVENT
+
+room_goto(gotoRoom);
+oPlayer.x = targetX;
+oPlayer.y = targetY;
+
+
+//DOOR CREATION CODE EVENT
+
+gotoRoom = Room2;
+targetX = 765;
+targetY = 456;
+
+newPositionX = 765;

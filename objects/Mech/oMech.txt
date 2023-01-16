@@ -1,0 +1,34 @@
+// CREATE EVENT
+
+alarm_set(6, 60);
+
+idleSound += 0;
+
+image_speed = 1;
+
+time = 300;
+
+timer = time;
+
+//
+
+
+// STEP EVENT
+
+timer --;
+
+if(timer <= 0)
+{
+	timer = time;
+
+	audio_play_sound(choose(soMechIdle00,soMechIdle01,soMechIdle02,soMechIdle03,soMechIdle04,soMechIdle05,soMechStep1,soMechStep2),1,false);
+}
+
+//
+
+// DRAW GUI EVENT
+
+draw_text(0, 0, string("Time left ") + string(timer));
+
+
+//

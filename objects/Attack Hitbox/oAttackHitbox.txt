@@ -1,0 +1,22 @@
+// DRAW EVENT
+
+if (oPlayer.image_xscale = 1){
+	
+	draw_set_color(c_blue);
+	draw_rectangle(bbox_left + 50, bbox_top, bbox_right, bbox_bottom, 1);
+	draw_set_color(c_white);
+}
+
+if (oPlayer.image_xscale = -1){
+	
+	draw_set_color(c_blue);
+	draw_rectangle(bbox_left - 20, bbox_top, bbox_right, bbox_bottom, 1);
+	draw_set_color(c_white);
+}
+
+//
+
+
+//ANIMATION END EVENT
+
+DESTROY INSTANCE

@@ -1,0 +1,112 @@
+// CREATE EVENT
+
+newPositionX = round(x);
+
+HP = 3;
+
+
+invincibility = false;
+
+
+state = PLAYERSTATE.FREE
+		hitByAttack = ds_list_create();
+	
+		enum PLAYERSTATE
+		{
+			FREE,
+			ATTACK_COMBO,
+		
+		
+		}
+	
+	
+
+//
+
+// CLEAN UP EVENT
+
+ds_list_destroy(hitByAttack);
+
+//
+
+// STEP EVENT
+
+
+	
+			switch (state)
+		{
+			case PLAYERSTATE.FREE: PLAYERSTATE_FREE(); break;
+			case PLAYERSTATE.ATTACK_COMBO: PLAYERSTATE_ATTACK_SLASH(); break;
+		
+		
+		}
+	
+	
+	
+	
+
+
+//
+
+// DRAW GUI EVENT
+
+
+draw_text(0, 0, string("HP: ") + string(HP));
+
+//
+
+
+
+// GLOBAL LEFT CLICK
+
+newPositionX = round(mouse_x);
+
+
+//
+
+
+// KEY PRESS ALT
+
+state = PLAYERSTATE.ATTACK_COMBO;
+
+//
+
+// TOUCH oCrate EVENT
+
+if (collision_point(x,y,oCrate,false, true)
+{
+	invincibility = true;
+}
+
+else
+{
+	invincibility = false;
+}
+
+//
+
+// TOUCH oEnemy EVENT
+
+if (collision_point(x,y,oEnemy,false,true))
+{
+	HP -=1;
+	x -=50;
+	newPositionX -=50;
+}
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

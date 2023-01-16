@@ -1,0 +1,9 @@
+		var _damage = argument0;
+		enemyHP -= _damage;
+		if(enemyHP <= 0)
+		{
+			
+			instance_destroy();
+			
+		}
+	
